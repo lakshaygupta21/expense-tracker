@@ -16,7 +16,7 @@ import org.springframework.data.annotation.CreatedDate;
 @Entity
 @Table
 @Transactional
-public class Expense {
+public class Due {
 	
 	@Id
 	@Column
@@ -26,18 +26,8 @@ public class Expense {
 	@Column
 	private Long studentId;
 	
-	
 	@Column
-	private String place;
-	
-	
-	@Column
-	private String how;
-	
-	
-	@Column
-	private String why;
-	
+	private String whom;
 	
 	@Column
 	private Integer amount;
@@ -47,29 +37,30 @@ public class Expense {
     private Date createdAt;
 	
 	
+	@Column
+	private String last_date;
 
-	public Long getId() {
-		return id;
-	}
+	
+	
 
-
-
-	public Expense() {
+	public Due() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
 
-
-	public Expense(Long studentId, String place, String how, String why, Integer amount) {
+	public Due(Long studentId, String whom, Integer amount, String last_date) {
 		super();
 		this.studentId = studentId;
-		this.place = place;
-		this.how = how;
-		this.why = why;
+		this.whom = whom;
 		this.amount = amount;
+		this.last_date = last_date;
 	}
 
+
+	public Long getId() {
+		return id;
+	}
 
 
 	public void setId(Long id) {
@@ -77,11 +68,9 @@ public class Expense {
 	}
 
 
-
 	public Long getStudentId() {
 		return studentId;
 	}
-
 
 
 	public void setStudentId(Long studentId) {
@@ -89,41 +78,14 @@ public class Expense {
 	}
 
 
-
-	public String getPlace() {
-		return place;
+	public String getWhom() {
+		return whom;
 	}
 
 
-
-	public void setPlace(String place) {
-		this.place = place;
+	public void setWhom(String whom) {
+		this.whom = whom;
 	}
-
-
-
-	public String getHow() {
-		return how;
-	}
-
-
-
-	public void setHow(String how) {
-		this.how = how;
-	}
-
-
-
-	public String getWhy() {
-		return why;
-	}
-
-
-
-	public void setWhy(String why) {
-		this.why = why;
-	}
-
 
 
 	public Integer getAmount() {
@@ -131,11 +93,9 @@ public class Expense {
 	}
 
 
-
 	public void setAmount(Integer amount) {
 		this.amount = amount;
 	}
-
 
 
 	public Date getCreatedAt() {
@@ -143,9 +103,23 @@ public class Expense {
 	}
 
 
-
 	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
 	}
+
+
+	public String getLast_date() {
+		return last_date;
+	}
+
+
+	public void setLast_date(String last_date) {
+		this.last_date = last_date;
+	}
+	
+	
+	
+	
+	
 
 }
