@@ -6,7 +6,7 @@ Please follow the steps in order to run this microservice on your local environm
 
 2. In application.properties, please update *spring.datasource.url* with your mariadb database url
 
-3. After this you are all set and good to run the application
+3. After this you are all set and good to run the application. The application will run at port 8000
 
 4. Check the following routes as per requirement
 
