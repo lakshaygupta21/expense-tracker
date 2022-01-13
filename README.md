@@ -4,7 +4,7 @@ Please follow the steps in order to run this microservice on your local environm
 
 1. Make sure Java 11 is set up on your machine
 
-2. In application.properties, please update *spring.datasource.url* with your mariadb database url
+2. In application.properties, please update *spring.datasource.url* with your mariadb database url and import mysql-connector in external libraries. Download it from <a href = "https://drive.google.com/file/d/1fMD2xg8XydfqiAgb_qnU0b-EpsdM68Cr/view?usp=sharing">here</a>
 
 3. After this you are all set and good to run the application. The application will run at port 8000
 
